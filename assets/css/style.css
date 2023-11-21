@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    /* animation: slide-up 0.5s ease-out; */
+    /* position: relative; */
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 12px 12px 35px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+button[type=submit] {
+    /* background-color: #4CAF50; */
+    background-color: rgb(17, 3, 3) transparent;
+    /* color: white; */
+    color: rgb(15, 14, 14);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.3s ease-out;
+}
+
+button[type=submit]:hover {
+    background-color: #3e8e41;
+}
+
+a {
+    color: rgb(221, 106, 106);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+a:hover{
+    border: 1px solid #ddcfcf;
+    color: #f1f1f1;
+    background-color: black ;
+}
+
+.container p {
+    box-shadow: #3e8e41;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    user-select: none;
+    padding: 10px;
+}
+.inputIcon {
+    margin: 15px 0 15px 0;
+    position: relative;
+}
+
+.inputIcon i {
+    position: absolute;
+    left: 0;
+    top: 27px;
+    font-size: 20px;
+    padding: 9px 8px;
+    color: #ccc;
+}
+
+.inputIcon input[type=text]:focus + i,
+.inputIcon input[type=email]:focus + i,
+.inputIcon input[type=password]:focus + i {
+  color: rgb(10, 10, 10);
+} 
+
+.inputIcon input[type=password]:focus + .fa-lock + .eye i,
+.inputIcon input[type=password]:active + .fa-lock + .eye i {
+  color: rgb(10, 10, 10);
+}
+
+/* faire danser le eye c-a-d faire des va-et-vient
+.eye::before {
+    content: "";
+  }
+  
+  .eye:hover::before {
+    content: "Password";
+  } */
+
+.eye {
+    position: absolute;
+    right: 45px;
+    top: 2px;   
+}
+
+.inputIcon .eye i:hover {
+    cursor: pointer;
+    color: rgb(10, 10, 10);
+}
+
+.error, .errorpassword {
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
